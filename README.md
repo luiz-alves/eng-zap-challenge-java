@@ -3,12 +3,19 @@
 Repositório do código fonte do desafio OLX / Zap. Foi desenvolvida a solução solicitada na **Opção B: Fazer uma API (backend)**. Todos os detalhes dos
 requisitos estão [aqui](https://olxbr.github.io/cultura/challenges/engineering.html).
 
-## Executando Testes
+## Executando Testes e Gerando Jacoco Report
 
 Execute o comando abaixo na raiz do projeto:
 
 ``` 
-mvn clean test 
+mvn clean install 
+```
+
+Após a execução da Build e Testes é possível acessar o Jacoco Report que exibe o Test Coverage da aplicação. A partir da raiz do projeto, siga para o
+diretório abaixo:
+
+``` 
+/challenge-jacoco/target/site/jacoco-aggregate/index.html
 ```
 
 ## Executando a aplicação localmente
