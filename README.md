@@ -26,13 +26,25 @@ diretório abaixo:
 
 ## Executando a aplicação localmente
 
-Execute o comando abaixo na raiz do projeto:
+### Rodando o projeto na IDE
+Abra o projeto na IDE de sua preferência (para este desenvolvimento foi utilizado o IDEA IntelliJ Community Version), depois importe todos os módulos do projeto, configure a versão do Maven e JDK. Depois de tudo configurado, basta executar o projeto utilizando a classe [ChallengeApiApplication](https://github.com/luiz-alves/eng-zap-challenge-java/blob/main/challenge-api/src/main/java/br/com/olx/challenge/api/ChallengeApiApplication.java).
+
+Nota: foram utilizadas as seguintes versões para este projeto:
+
+``` 
+- Maven 3.6.3
+
+- Java 11 JDK GraalVM
+```
+
+
+Caso prefira executar localmente sem o uso de uma IDE, basta executar o comando abaixo na raiz do projeto:
 
 ``` 
 ./mvnw spring-boot:run -pl challenge-api
 ```
 
-## Acessando a API
+### Acessando a API
 
 Após executar a aplicação localmente com o comando acima. Foi disponibilizada a documentação através do Swagger. Ele pode ser acessado pela URL abaixo
 
@@ -40,7 +52,7 @@ Após executar a aplicação localmente com o comando acima. Foi disponibilizada
 http://localhost:8181/swagger-ui/index.html
 ```
 
-## Como utilizar a API
+### Como utilizar a API
 
 Você pode executar as requisições diretamente pelo Swagger citado acima, mas se preferir, pode utilizar a linha de comando. Primeiro é necessário
 carregar os dados dos imóveis. Execute o comando abaixo:
