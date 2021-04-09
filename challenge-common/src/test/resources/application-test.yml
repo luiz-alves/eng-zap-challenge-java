@@ -1,0 +1,23 @@
+bounding-box:
+    minLon: -46.693419
+    minLat: -23.568704
+    maxLon: -46.641146
+    maxLat: -23.546686
+
+zap:
+    parameter:
+        minimumPriceForRental: 3500
+        minimumPriceForSale: 600000
+        boundingBoxAreaSaleDiscount: 10
+        minimumSquareMeterPrice: 3500
+
+vivareal:
+    parameter:
+        maximumPriceForRental: 4000
+        maximumPriceForSale: 700000
+        boundingBoxAreaRentalFee: 50
+        rentalPriceDiscount: 30
+
+properties:
+    filePath: 'src/test/resources/data/properties.json'
+    isAbsolutePath: true

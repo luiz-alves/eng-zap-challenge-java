@@ -1,0 +1,62 @@
+springfox.documentation.swagger.v2.path: /api-docs
+server:
+    port: 8181
+    compression:
+        enabled: true
+        mime-types: application/json
+
+spring:
+    mvc.async.request-timeout: 5000
+    mvc.locale: pt_BR
+    mvc.locale-resolver: fixed
+    application:
+        name: challenge-api
+
+hystrix:
+    metrics:
+        enabled: true
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 20000
+
+management:
+    health:
+        diskspace:
+            enabled: false
+    endpoint:
+        health:
+            show-details: always
+    endpoints:
+        web:
+            exposure:
+                include: prometheus, health
+            base-path: '/'
+            path-mapping:
+                prometheus: 'metrics'
+
+bounding-box:
+    minLon: -46.693419
+    minLat: -23.568704
+    maxLon: -46.641146
+    maxLat: -23.546686
+
+zap:
+    parameter:
+        minimumPriceForRental: 3500
+        minimumPriceForSale: 600000
+        boundingBoxAreaSaleDiscount: 10
+        minimumSquareMeterPrice: 3500
+
+vivareal:
+    parameter:
+        maximumPriceForRental: 4000
+        maximumPriceForSale: 700000
+        boundingBoxAreaRentalFee: 50
+        rentalPriceDiscount: 30
+
+properties:
+    filePath: 'data/properties.json'
+    isAbsolutePath: false

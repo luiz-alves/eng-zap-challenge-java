@@ -1,0 +1,6 @@
+spring.application.name: challenge-api
+
+app:
+    logging:
+        level: INFO
+        appender: CONSOLE-DEV
