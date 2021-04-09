@@ -5,7 +5,13 @@ requisitos estão [aqui](https://olxbr.github.io/cultura/challenges/engineering.
 
 ## Executando Testes e Gerando Jacoco Report
 
-Execute o comando abaixo na raiz do projeto:
+Primeiramente baixe o código-fonte deste repositório utilizando o comando abaixo:
+
+``` 
+git clone https://github.com/luiz-alves/eng-zap-challenge-java.git
+```
+
+Depois execute o comando abaixo na raiz do projeto:
 
 ``` 
 mvn clean install 
@@ -36,16 +42,18 @@ http://localhost:8181/swagger-ui/index.html
 
 ## Como utilizar a API
 
-Execute uma requisição para carregar os dados dos imóveis:
+Você pode executar as requisições diretamente pelo Swagger citado acima, mas se preferir, pode utilizar a linha de comando. Primeiro é necessário
+carregar os dados dos imóveis. Execute o comando abaixo:
 
 ``` 
-curl -X POST "http://localhost:8181/" -H "accept: */*" -d ""
+curl -X POST "http://localhost:8181/property-loaders" -H "accept: */*" -d ""
 ```
 
-Após carregar os dados, é possível realizar consultas dos imóveis por portal.
+Se tudo ocorrer bem, você receberá um HTTP 200, isso quer dizer que os dados foram carregados com sucesso. Após isso, é possível realizar consultas
+dos imóveis por portal. Execute o comando abaixo (você pode alterar os parâmetros se preferir):
 
 ``` 
-curl -X GET "http://localhost:8181/" -H "accept: */*" -H "page: 0" -H "portal: zap" -H "size: 30"
+curl -X GET "http://localhost:8181/properties" -H "accept: */*" -H "page: 0" -H "portal: zap" -H "size: 30"
 ```
 
 ## Autor

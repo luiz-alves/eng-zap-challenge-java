@@ -25,7 +25,7 @@ class EligiblePropertiesControllerIntegrationTest {
     @Test
     void should_return_zap_portal_properties() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-            .get("/")
+            .get("/properties")
             .header("portal", "zap"))
             .andDo(MockMvcResultHandlers.print())
             .andExpect(MockMvcResultMatchers.status().isOk());
@@ -34,7 +34,7 @@ class EligiblePropertiesControllerIntegrationTest {
     @Test
     void should_return_vivareal_portal_properties() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-            .get("/")
+            .get("/properties")
             .header("portal", "vivareal"))
             .andDo(MockMvcResultHandlers.print())
             .andExpect(MockMvcResultMatchers.status().isOk());
@@ -44,7 +44,7 @@ class EligiblePropertiesControllerIntegrationTest {
     void should_return_error_when_portal_not_exists() throws Exception {
         Mockito.when(portalPropertyService.getPropertiesFromPortal("dasdasdas",0,30)).thenThrow(IllegalArgumentException.class);
         mockMvc.perform(MockMvcRequestBuilders
-            .get("/")
+            .get("/properties")
             .header("portal", "dasdasdas"))
             .andDo(MockMvcResultHandlers.print())
             .andExpect(MockMvcResultMatchers.status().is5xxServerError());

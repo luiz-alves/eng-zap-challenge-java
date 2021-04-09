@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/")
+@RequestMapping("/property-loaders")
 @Api(value = "Imóveis do Portal")
 public class LoadPropertiesController implements LoadPropertiesControllerApi {
 

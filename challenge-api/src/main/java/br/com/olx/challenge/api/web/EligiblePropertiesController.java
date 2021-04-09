@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/")
+@RequestMapping("/properties")
 @Api(value = "Imóveis do Portal")
 public class EligiblePropertiesController implements EligiblePropertiesControllerApi {
 

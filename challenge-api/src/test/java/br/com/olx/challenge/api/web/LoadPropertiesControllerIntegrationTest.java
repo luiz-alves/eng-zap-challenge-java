@@ -19,7 +19,7 @@ class LoadPropertiesControllerIntegrationTest {
     @Test
     void should_load_properties() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders
-            .post("/"))
+            .post("/property-loaders"))
             .andDo(MockMvcResultHandlers.print())
             .andExpect(MockMvcResultMatchers.status().isOk());
     }
